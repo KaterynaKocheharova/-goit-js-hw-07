@@ -55,15 +55,15 @@ img {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 20px;
+  row-gap: 30px;
   column-gap: 20px;
 }
 
 .image-item {
   width: calc((100% - 20px) / 2);
+  box-shadow: 0 0 7px 7px rgba(15, 106, 47, 0.3);;
 }
 
-image:first-child,
-image:first-child {
-  object-fit: cover;
+.image {
+  height: 100%;
 }
