@@ -2,7 +2,7 @@
 
 const loginForm = document.querySelector(".login-form");
 
-// ======================================= HANDLE LOGIN FORM SUBMIT EVENT FUNCTION ===========================
+// ======================================= HANDLE LOGIN FORM SUBMIT EVENT ===========================
 
 const handleLogining = (event) => {
 
@@ -15,11 +15,11 @@ const email = form.elements.email.value;
 const password = form.elements.password.value;
 const valuesObject = {};
 
-// Do I need trim here? Просто без метода трім все і так працює, тобто незважаючи на те яку кількість пробілів я ввела,
-// воно все рівно не пропускає. Тобто будь-який пробіл вважається "". Якось дивно
+// Validation
 if(email.trim() === "" || password.trim() === "") {
     alert("All form fields must be filled in");
 } else {
+    // Collecting user's data
     valuesObject.email = form.elements.email.value;
     valuesObject.password = form.elements.password.value;
     console.log(valuesObject);
