@@ -30,15 +30,18 @@ function createBoxes(amount) {
   return boxesContainer;
 }
 
-// ============================ REMOVING ELEMENTS FUNCTION ======================================
+// ============================ REMOVING ELEMENTS FUNCTION =======================================
 
 function removeBoxes() {
   boxesContainer.innerHTML = "";
 }
 
 // =============================== ADDING EVENT LISTENER TO CREATE BUTTON =========================
+
 createBtn.addEventListener("click", function () {
+  boxesContainer.innerHTML = "";
   createBoxes(input.value);
+  input.value = "";
 });
 
 // =============================== ADDING EVENT LISTENER TO CLEAR BUTTON ==========================
