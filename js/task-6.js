@@ -30,6 +30,24 @@ function createBoxes(amount) {
   return boxesContainer;
 }
 
+// function createBoxes(amount) {
+//   if (amount >= 1 && amount <= 100) {
+//     let html = '';
+//     let width = 30;
+//     let height = 30;
+
+//     for (let i = 0; i < amount; i++) {
+//       const color = getRandomHexColor();
+//       html += `<div style="width: ${width}px; height: ${height}px; background-color: ${color}"></div>`;
+//       width += 10;
+//       height += 10;
+//     }
+
+//     boxesContainer.insertAdjacentHTML('beforeend', html);
+//   }
+//   return boxesContainer;
+// }
+
 // ============================ REMOVING ELEMENTS FUNCTION =======================================
 
 function removeBoxes() {
@@ -49,3 +67,5 @@ createBtn.addEventListener("click", function () {
 clearBtn.addEventListener("click", function () {
   removeBoxes(input.value);
 });
+
+
