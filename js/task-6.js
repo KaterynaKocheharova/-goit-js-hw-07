@@ -14,7 +14,6 @@ const boxesContainer = document.querySelector("#boxes");
 // ================================== ADDING ELEMENTS FUNCTION =================================
 
 function createBoxes(amount) {
-  if (amount >= 1 && amount <= 100) {
     let width = 30;
     let height = 30;
     for (let i = 0; i < amount; i++) {
@@ -26,9 +25,10 @@ function createBoxes(amount) {
       height += 10;
       boxesContainer.appendChild(element);
     }
-  }
   return boxesContainer;
 }
+
+// OR:
 
 // function createBoxes(amount) {
 //   if (amount >= 1 && amount <= 100) {
@@ -57,9 +57,11 @@ function removeBoxes() {
 // =============================== ADDING EVENT LISTENER TO CREATE BUTTON =========================
 
 createBtn.addEventListener("click", function () {
-  boxesContainer.innerHTML = "";
-  createBoxes(input.value);
-  input.value = "";
+  if (input.value >= 1 && input.value <= 100) { 
+    boxesContainer.innerHTML = "";
+    createBoxes(input.value);
+    input.value = "";
+  }
 });
 
 // =============================== ADDING EVENT LISTENER TO CLEAR BUTTON ==========================
